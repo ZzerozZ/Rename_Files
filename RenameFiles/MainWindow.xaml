@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RenameFiles"
         mc:Ignorable="d"
-        Title="MainWindow" Height="240" Width="525">
+        Title="File management" Height="240" Width="525">
 
     <Window.Resources>
         <ResourceDictionary Source="TextBoxDictionary.xaml"></ResourceDictionary>
-        <!--<ResourceDictionary Source="ButtonDictionary.xaml"></ResourceDictionary>-->
 
     </Window.Resources>
     
@@ -35,7 +34,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0">Folder</TextBlock>
-                <TextBox x:Name="txbFolder" Grid.Column="1" Height="20" Margin="0 0 15 0"></TextBox>
+                <TextBox x:Name="txbFolder" Grid.Column="1" Height="20" Margin="0 0 25 0"></TextBox>
             </Grid>
 
             <Grid Height="auto" Grid.Column="1">
@@ -45,7 +44,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">New format</TextBlock>
-                <TextBox x:Name="txbNewFormat" Grid.Column="1" Height="20" Margin="20 0 15 0"></TextBox>
+                <TextBox x:Name="txbNewFormat" Grid.Column="1" Height="20" Margin="20 0 25 0"></TextBox>
             </Grid>
 
         </Grid>
@@ -59,22 +58,22 @@
 
             <Grid Height="auto">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5 0 0 0">Remove from</TextBlock>
-                <TextBox x:Name="txbRemoveFrom" Grid.Column="1" Height="20" Margin="20 0 15 0"></TextBox>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0">Remove from</TextBlock>
+                <TextBox x:Name="txbRemoveFrom" Grid.Column="1" Height="20" Margin="20 0 25 0"></TextBox>
             </Grid>
 
             <Grid Height="auto" Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">Remove to</TextBlock>
-                <TextBox x:Name="txbRemoveTo" Grid.Column="1" Height="20" Margin="20 0 15 0"></TextBox>
+                <TextBox x:Name="txbRemoveTo" Grid.Column="1" Height="20" Margin="20 0 25 0"></TextBox>
             </Grid>
 
         </Grid>
@@ -88,22 +87,22 @@
 
             <Grid Height="auto">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0">Replace</TextBlock>
-                <TextBox x:Name="txbReplace" Grid.Column="1" Height="20" Margin="20 0 15 0"></TextBox>
+                <TextBox x:Name="txbReplace" Grid.Column="1" Height="20" Margin="20 0 25 0"></TextBox>
             </Grid>
 
             <Grid Height="auto" Grid.Column="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left">Replace by</TextBlock>
-                <TextBox x:Name="txbReplaceBy" Grid.Column="1" Height="20" Margin="20 0 15 0"></TextBox>
+                <TextBox x:Name="txbReplaceBy" Grid.Column="1" Height="20" Margin="20 0 25 0"></TextBox>
             </Grid>
 
         </Grid>
