@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace RenameFiles
 {
@@ -56,12 +44,10 @@ namespace RenameFiles
             done = true;
             string newname = "";
 
-            string[] request = txbNameFormat.Text.Split(',');
-
             try
             {
-                if (request[0] != "" && request[1] != "")
-                    newname = oldName.Remove(oldName.IndexOf(request[0]), oldName.IndexOf(request[1]) + request[1].Length - oldName.IndexOf(request[0]));
+                if (txbRemoveFrom.Text != "" && txbRemoveTo.Text != "")
+                    newname = oldName.Remove(oldName.IndexOf(txbRemoveFrom.Text), oldName.IndexOf(txbRemoveTo.Text) + txbRemoveTo.Text.Length - oldName.IndexOf(txbRemoveFrom.Text));
                 else
                     newname = oldName;
             }
@@ -71,18 +57,15 @@ namespace RenameFiles
                 done = false;
                 return oldName;
             }
-
-            if(request.Length > 2)
-            {
-                if (request[2] != "")
-                    newname = newname.Replace(request[2], request[3]);
+            
+                if (txbReplace.Text != "")
+                    newname = newname.Replace(txbReplace.Text, txbReplaceBy.Text);
                 else
                     newname = oldName;
-            }
 
-            if(request.Length > 4)
+            if(txbNewFormat.Text != "")
             {
-                newname = newname.Remove(newname.LastIndexOf('.'), newname.Length - newname.LastIndexOf('.')) + request[4];
+                newname = newname.Remove(newname.LastIndexOf('.'), newname.Length - newname.LastIndexOf('.')) + txbNewFormat.Text;
             }
 
             return newname;
